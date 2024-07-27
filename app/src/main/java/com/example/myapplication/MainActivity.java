@@ -1,13 +1,17 @@
 package com.example.myapplication;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,11 +21,14 @@ import android.widget.Toast;
 
 import com.example.myapplication.activity.AboutActivity;
 import com.example.myapplication.activity.ContactActivity;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
     ImageView imageSlider;
     Button btn_home, btn_contact;
     Toolbar toolbar;
+    NavigationView navigation_slider;
+    DrawerLayout drawer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         btn_contact = (Button)findViewById(R.id.btn_contact);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        navigation_slider = (NavigationView) findViewById(R.id.navigation_slider);
+        drawer = (DrawerLayout) findViewById(R.id.drawer);
         btn_contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +50,26 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        navigation_slider.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+
+                    case R.id.item_telegram:
+
+                        Intent intent_mohammadi2 = new Intent(Intent.ACTION_VIEW, Uri.parse("http://telegram.me/p30droid"));
+                        startActivity(intent_mohammadi2);
+
+
+                        break;
+                }
+
+                return false;
+            }
+        });
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(MainActivity.this, drawer, toolbar, R.string.open, R.string.close);
+        toggle.syncState();
     }
     @Override
     protected void onPause() {
@@ -117,13 +146,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent_mohammadi2);
                 break;
 
-
-
-
         }
 
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed() {
+
+
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(Gravity.LEFT);
+        } else {
+            super.onBackPressed();
+        }
+
+    }
 }
+
 
