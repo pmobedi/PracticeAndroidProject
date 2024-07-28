@@ -2,11 +2,13 @@ package com.example.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,6 +23,7 @@ import android.widget.Toast;
 
 import com.example.myapplication.activity.AboutActivity;
 import com.example.myapplication.activity.ContactActivity;
+import com.example.myapplication.uiDesign.DialogManager;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -60,8 +63,9 @@ public class MainActivity extends AppCompatActivity {
 
                         Intent intent_mohammadi2 = new Intent(Intent.ACTION_VIEW, Uri.parse("http://telegram.me/p30droid"));
                         startActivity(intent_mohammadi2);
-
-
+                        break;
+                    case R.id.item_login:
+                        DialogManager.loginUI(MainActivity.this);
                         break;
                 }
 
@@ -117,13 +121,32 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
 
-//            case R.id.item_exit:
-//
-//                //   finish();
-//
-//                break;
-//
-//
+              case R.id.item_exit:
+                  AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+                  alert.setTitle(getResources().getString(R.string.exit_title));
+                  alert.setMessage(getResources().getString(R.string.exit_message));
+                  alert.setIcon(android.R.drawable.ic_menu_delete);
+                  alert.setPositiveButton(getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
+                      @Override
+                      public void onClick(DialogInterface dialogInterface, int i) {
+
+                          finish();
+
+                      }
+                  });
+
+                  alert.setNeutralButton(getResources().getString(R.string.no), new DialogInterface.OnClickListener() {
+                      @Override
+                      public void onClick(DialogInterface dialogInterface, int i) {
+
+                      }
+                  });
+
+                  alert.show();
+
+
+               break;
+
             case R.id.item_contact:
                 Intent intent_ahmadi = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:0912236458"));
                 startActivity(intent_ahmadi);
