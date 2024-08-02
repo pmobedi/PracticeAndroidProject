@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.example.myapplication.activity.AboutActivity;
 import com.example.myapplication.activity.ContactActivity;
+import com.example.myapplication.database.FlootDatabaseHelper;
 import com.example.myapplication.uiDesign.DialogManager;
 import com.google.android.material.navigation.NavigationView;
 
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FlootDatabaseHelper flootDatabaseHelper = new FlootDatabaseHelper(getApplicationContext());
         Log.e("LifeCycle Main", "OnCreate");
         imageSlider = (ImageView) findViewById(R.id.img_slider);
         btn_home = (Button) findViewById(R.id.btn_home);
