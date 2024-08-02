@@ -68,10 +68,14 @@ public class MainActivity extends AppCompatActivity {
                         DialogManager.loginUI(MainActivity.this);
                         break;
                 }
+                if (drawer.isDrawerOpen(GravityCompat.START)) {
+                    drawer.closeDrawer(Gravity.LEFT);
+                }
 
                 return false;
             }
         });
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(MainActivity.this, drawer, toolbar, R.string.open, R.string.close);
         toggle.syncState();
     }
