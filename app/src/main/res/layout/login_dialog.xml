@@ -64,5 +64,12 @@
 
     </LinearLayout>
 
+    <Button
+        android:text="@string/register_user"
+        android:background="@drawable/btn_backgroudn"
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
 </LinearLayout>

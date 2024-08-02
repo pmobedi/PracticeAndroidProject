@@ -53,4 +53,22 @@ public class UserDbAdapter extends FlootDatabaseHelper {
 
         return usersList;
     }
+    public long login(User user){
+
+        long result=0;
+        SQLiteDatabase db=getReadableDatabase();
+        String query="select * from "+TABLE_USERS+" where  "+KEY_USERNAME+" = ? and "
+                +KEY_PASSWORD+" = ? ";
+
+        String[] params={user.getUserName(),user.getPassword()};
+
+        Cursor cursor=db.rawQuery(query,params);
+
+        if(cursor.moveToNext()){
+            result=cursor.getInt(cursor.getColumnIndex(KEY_ID));
+        }
+
+        return result;
+    }
+
 }
