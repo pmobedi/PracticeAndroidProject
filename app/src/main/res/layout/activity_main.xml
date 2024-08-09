@@ -38,63 +38,12 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:background="#FFFFFF"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:background="@mipmap/ic_launcher"
-                            android:layout_width="96dp"
-                            android:layout_height="96dp" />
-                        <TextView
-                            android:text="دیجی کالا"
-                            android:textSize="@dimen/app_title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
 
-                    <LinearLayout
-                        android:gravity="center"
-                        android:background="#FFFFFF"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:background="@mipmap/ic_launcher"
-                            android:layout_width="96dp"
-                            android:layout_height="96dp" />
-                        <TextView
-                            android:text="دیجی کالا"
-                            android:textSize="@dimen/app_title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:background="#FFFFFF"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center">
-                        <ImageView
-                            android:background="@mipmap/ic_launcher"
-                            android:layout_width="96dp"
-                            android:layout_height="96dp" />
-                        <TextView
-                            android:text="دیجی کالا"
-                            android:textSize="@dimen/app_title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-
-
-
+                    <GridView
+                        android:numColumns="3"
+                        android:id="@+id/grid_best_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
 
 
                 </LinearLayout>
@@ -106,65 +55,7 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:background="#FFFFFF"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:background="@mipmap/ic_launcher"
-                            android:layout_width="96dp"
-                            android:layout_height="96dp" />
-                        <TextView
-                            android:text="دیجی کالا"
-                            android:textSize="@dimen/app_title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:gravity="center"
-                        android:background="#FFFFFF"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:background="@mipmap/ic_launcher"
-                            android:layout_width="96dp"
-                            android:layout_height="96dp" />
-                        <TextView
-                            android:text="دیجی کالا"
-                            android:textSize="@dimen/app_title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:background="#FFFFFF"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center">
-                        <ImageView
-                            android:background="@mipmap/ic_launcher"
-                            android:layout_width="96dp"
-                            android:layout_height="96dp" />
-                        <TextView
-                            android:text="دیجی کالا"
-                            android:textSize="@dimen/app_title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-
-
-
-
-
+        
                 </LinearLayout>
 
                 <TextView
@@ -174,63 +65,6 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:background="#FFFFFF"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:background="@mipmap/ic_launcher"
-                            android:layout_width="96dp"
-                            android:layout_height="96dp" />
-                        <TextView
-                            android:text="دیجی کالا"
-                            android:textSize="@dimen/app_title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:gravity="center"
-                        android:background="#FFFFFF"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:background="@mipmap/ic_launcher"
-                            android:layout_width="96dp"
-                            android:layout_height="96dp" />
-                        <TextView
-                            android:text="دیجی کالا"
-                            android:textSize="@dimen/app_title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:background="#FFFFFF"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center">
-                        <ImageView
-                            android:background="@mipmap/ic_launcher"
-                            android:layout_width="96dp"
-                            android:layout_height="96dp" />
-                        <TextView
-                            android:text="دیجی کالا"
-                            android:textSize="@dimen/app_title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-
-
-
 
 
                 </LinearLayout>
