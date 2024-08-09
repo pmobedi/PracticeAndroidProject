@@ -5,7 +5,9 @@ plugins {
 android {
     namespace 'com.example.myapplication'
     compileSdk 34
-
+    viewBinding {
+        enabled = true
+    }
     defaultConfig {
         applicationId "com.example.myapplication"
         minSdk 24
@@ -39,4 +41,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
     implementation (platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
     implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
 }

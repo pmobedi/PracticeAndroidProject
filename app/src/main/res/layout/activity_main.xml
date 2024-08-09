@@ -51,12 +51,18 @@
                 <TextView
                     style="@style/text_style"
                     android:text="@string/best_sellers"/>
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-        
-                </LinearLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_best_sellers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
 
                 <TextView
                     style="@style/text_style"

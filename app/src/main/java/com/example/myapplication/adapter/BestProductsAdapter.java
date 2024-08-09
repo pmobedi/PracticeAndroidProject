@@ -1,7 +1,6 @@
 package com.example.myapplication.adapter;
 
 import android.content.Context;
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,12 +15,12 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BestProductAdapter extends BaseAdapter {
+public class BestProductsAdapter extends BaseAdapter {
     List<Product> productList = new ArrayList<>();
     Context context;
     LayoutInflater inflater;
 
-    public  BestProductAdapter(Context context,List<Product> products){
+    public BestProductsAdapter(Context context, List<Product> products){
         productList = products;
         this.context= context;
         inflater = LayoutInflater.from(context);
