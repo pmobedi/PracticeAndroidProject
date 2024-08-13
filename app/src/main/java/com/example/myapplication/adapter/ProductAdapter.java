@@ -1,6 +1,7 @@
 package com.example.myapplication.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.activity.AppDescriptionActivity;
 import com.example.myapplication.databinding.ProductRowBinding;
 import com.example.myapplication.models.Product;
 import com.squareup.picasso.Picasso;
@@ -48,6 +50,16 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
         holder.binding.txtTitle.setText(product.getTitle());
         Picasso.with(context).load(product.getIcon()).error(R.mipmap.ic_launcher).placeholder(R.mipmap.ic_launcher).into(holder.binding.imgApp);
+        holder.binding.cardId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, AppDescriptionActivity.class);
+                intent.putExtra("product",product);
+                intent.putExtra("id",1);
+                intent.putExtra("title", "mohammadi");
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
