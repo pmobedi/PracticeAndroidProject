@@ -1,5 +1,6 @@
 package com.example.myapplication.dataProvider;
 
+import com.example.myapplication.models.Category;
 import com.example.myapplication.models.Product;
 
 import java.util.List;
@@ -13,5 +14,6 @@ public interface IData {
 
     public List<Product> getAnnouncements();
 
+    public List<Category> getCategories();
 
 }

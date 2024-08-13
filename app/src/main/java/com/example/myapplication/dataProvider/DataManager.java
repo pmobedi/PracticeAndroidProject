@@ -1,6 +1,7 @@
 package com.example.myapplication.dataProvider;
 
 
+import com.example.myapplication.models.Category;
 import com.example.myapplication.models.Product;
 import java.util.ArrayList;
 import java.util.List;
@@ -293,6 +294,43 @@ public class DataManager implements IData {
 
         return productList;
     }
+
+
+
+    public List<Category> getCategories() {
+
+        List<Category> categoryList = new ArrayList<>();
+        Category categories1 = new Category();
+        categories1.setId(100);
+        categories1.setName("بازی‌ها");
+        categories1.setDescription("دسته‌بندی بازی‌ها");
+        categories1.setIconUrl("https://cdn-icons-png.flaticon.com/128/2972/2972351.png");
+        categoryList.add(categories1);
+
+        Category categories2 = new Category();
+        categories2.setId(101);
+        categories2.setName("اپلیکیشن‌ها");
+        categories2.setDescription("دسته‌بندی اپلیکیشن‌ها");
+        categories2.setIconUrl("https://cdn-icons-png.flaticon.com/128/3437/3437364.png");
+        categoryList.add(categories2);
+
+        Category categories3 = new Category();
+        categories3.setId(102);
+        categories3.setName("تفریحی");
+        categories3.setDescription("دسته‌بندی تفریحی");
+        categories3.setIconUrl("https://cdn-icons-png.flaticon.com/128/3983/3983680.png");
+        categoryList.add(categories3);
+
+        Category categories4 = new Category();
+        categories4.setId(103);
+        categories4.setName("کتاب ها و نشریات");
+        categories4.setDescription("دسته‌بندی کتاب ها و نشریات");
+        categories4.setIconUrl("https://cdn-icons-png.flaticon.com/128/9235/9235153.png");
+        categoryList.add(categories4);
+
+        return categoryList;
+    }
+
 
 
 
